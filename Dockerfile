@@ -10,19 +10,21 @@ FROM java:7
 MAINTAINER PhenoMeNal-H2020 Project ( phenomenal-h2020-users@googlegroups.com )
 
 
-ENV TOOL_VERSION=v0.3
+ENV TOOL_VERSION v0.3
 
 
 # Image Metadata
 LABEL Description="ParseBioNet Enrichment: open source software to cross referencing metabolites data with well known database identifiers."
-LABEL Version="v0.3"
+LABEL Version=$TOOL_VERSION
 
 
 # Update the repository sources list
 RUN apt-get update
 
 # Install required package
-RUN apt-get install -y git ant
+RUN apt-get install -y --no-install-recommends ant && \
+apt-get -y clean && apt-get -y autoremove && rm -rf /var/lib/{cache,log}/ /tmp/* /var/tmp/*
+	
 
 
 ###############
