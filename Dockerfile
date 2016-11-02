@@ -14,7 +14,7 @@ ENV TOOL_VERSION v0.3
 
 
 # Image Metadata
-LABEL Description="ParseBioNet Enrichment: open source software to cross referencing metabolites data with well known database identifiers."
+LABEL Description="PhenoMeNal Enrichment: open source software to cross reference metabolite data with well known database identifiers."
 LABEL Version=$TOOL_VERSION
 
 
@@ -39,8 +39,4 @@ RUN cd /files/git_App && git checkout -b tag0.3 v0.3
 
 RUN cd /files/git_App && ant jar
 
-# CMD ["-jar","/files/git_App/dist/parsebionet-enrichment-$TOOL_VERSION-Snapshot/parsebionet-enrichment-$TOOL_VERSION-Snapshot.jar"]
-
-
-
-ENTRYPOINT ["java", "-jar", "git_App/dist/parsebionet-enrichment/parsebionet-enrichment.jar"]
+ENTRYPOINT ["java", "-jar", "git_App/dist/phnmnl-enrichment/phnmnl-enrichment.jar"]
