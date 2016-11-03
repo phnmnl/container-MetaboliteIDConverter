@@ -4,13 +4,13 @@
 ###############################
 
 # Set the base image of this container
-FROM java:7
+FROM java:8
 
 # File Author / Maintainer 
 MAINTAINER PhenoMeNal-H2020 Project ( phenomenal-h2020-users@googlegroups.com )
 
 
-ENV TOOL_VERSION v0.3
+ENV TOOL_VERSION v0.4
 
 
 # Image Metadata
@@ -35,7 +35,7 @@ WORKDIR /files/
 
 RUN cd /files && git clone http://vm-metexplore-dev.toulouse.inra.fr:3000/bmerlet/parsebionet-Enrichment.git git_App
 
-RUN cd /files/git_App && git checkout -b tag0.3 v0.3
+RUN cd /files/git_App && git checkout -b tag0.4 v0.4
 
 RUN cd /files/git_App && ant jar
 
