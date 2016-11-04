@@ -39,4 +39,4 @@ RUN cd /files/git_App && git checkout -b tag0.4 v0.4
 
 RUN cd /files/git_App && ant jar
 
-ENTRYPOINT ["java", "-jar", "git_App/dist/phnmnl-enrichment/phnmnl-enrichment.jar"]
+# ENTRYPOINT ["java", "-jar", "git_App/dist/phnmnl-enrichment/phnmnl-enrichment.jar"]
