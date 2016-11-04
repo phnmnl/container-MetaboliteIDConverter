@@ -25,7 +25,7 @@ RUN apt-get update
 RUN apt-get install -y --no-install-recommends ant && \
 apt-get -y clean && apt-get -y autoremove && rm -rf /var/lib/{cache,log}/ /tmp/* /var/tmp/*
 	
-
+RUN export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
 
 ###############
 # Install Tool
