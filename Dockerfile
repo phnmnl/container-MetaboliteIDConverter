@@ -23,20 +23,19 @@ RUN apt-get update
 
 # Install required package
 RUN apt-get install -y --no-install-recommends ant && \
-apt-get -y clean && apt-get -y autoremove && rm -rf /var/lib/{cache,log}/ /tmp/* /var/tmp/*
+	apt-get -y clean && apt-get -y autoremove && rm -rf /var/lib/{cache,log}/ /tmp/* /var/tmp/*
 	
-RUN export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
 
 ###############
 # Install Tool
 ###############
 
-WORKDIR /files/
+WORKDIR /Javafiles/
 
-RUN cd /files && git clone http://vm-metexplore-dev.toulouse.inra.fr:3000/bmerlet/parsebionet-Enrichment.git git_App
+RUN cd /Javafiles && git clone http://vm-metexplore-dev.toulouse.inra.fr:3000/bmerlet/parsebionet-Enrichment.git 
 
-RUN cd /files/git_App && git checkout -b tag0.4 v0.4
+RUN cd /Javafiles && git checkout -b tag0.4 v0.4
 
-RUN cd /files/git_App && ant jar
+RUN cd /Javafiles && ant jar
 
-# ENTRYPOINT ["java", "-jar", "git_App/dist/phnmnl-enrichment/phnmnl-enrichment.jar"]
+ENTRYPOINT ["java", "-jar", "dist/phnmnl-enrichment/phnmnl-enrichment.jar"]
