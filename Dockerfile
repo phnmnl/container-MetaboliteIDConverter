@@ -32,7 +32,7 @@ RUN apt-get install -y --no-install-recommends ant && \
 
 WORKDIR /Javafiles/
 
-RUN cd /Javafiles && git clone http://vm-metexplore-dev.toulouse.inra.fr:3000/bmerlet/parsebionet-Enrichment.git 
+RUN cd /Javafiles && git clone http://vm-metexplore-dev.toulouse.inra.fr:3000/bmerlet/parsebionet-Enrichment.git .
 
 RUN cd /Javafiles && git checkout -b tag0.4 v0.4
 
