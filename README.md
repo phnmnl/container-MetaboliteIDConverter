@@ -45,7 +45,7 @@ docker pull docker-registry.phenomenal-h2020.eu/phnmnl/metaboliteidconverter
 
 For direct usage of the docker image:
 ```
-docker pull docker-registry.phenomenal-h2020.eu/phnmnl/metaboliteidconverter -inDB  <inputDB> -inFile <inputfile> -outFile <file_out> 
+docker run docker-registry.phenomenal-h2020.eu/phnmnl/metaboliteidconverter -inDB  <inputDB> -inFile <inputfile> -outFile <file_out> 
 ```
 
 The ```<inputDB>``` parameter can be one of the following: ```InChIKey```, ```KEGG```, ```ChEBI```, ```Chemical Name```
@@ -53,7 +53,7 @@ If your tsv file has columns headers on the first line, add the parameter ```-he
 
 ## Future Developments
 - Enable users to choose the desired output databases from the list of databases available in the CTS WebService
-- Link the metabolites to our Metabolic Network database (available on www.metexplore.fr). And in particular the Human Global Reconstruction Recon2 [2]
+- Link the metabolites to our Metabolic Network database (available on www.metexplore.fr). And in particular the Human Global Metabolism Reconstruction, Recon2 [2].
 
 ## Publications
 1. Wohlgemuth G, Haldiya PK, Willighagen E, Kind T, Fiehn O. The Chemical Translation Service—a web-based tool to improve standardization of metabolomic reports. Bioinformatics. 2010;26(20):2647-2648. doi:10.1093/bioinformatics/btq476.
