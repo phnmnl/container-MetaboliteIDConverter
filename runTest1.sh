@@ -14,16 +14,22 @@ apt-get update && apt-get install -y --no-install-recommends wget
 #
 # fi
 
-# Make the output directory
-mkdir /tmp/study-dir
+# Create the study directory
+mkdir /tmp/study-dir 
 
 # Download Test data 
+wget http://vm-metexplore-dev.toulouse.inra.fr:3000/bmerlet/parsebionet-Enrichment/src/master/test-data/input.tsv
+
+mv input.tsv /tmp/study-dir/
 
 # Run the actual app on the test data
-
+java -jar /Javafiles/dist/phnmnl-enrichment/phnmnl-enrichment.jar -inDB Kegg -inFile /tmp/study-dir/input.tsv -outFile /tmp/study-dir/out.tsv -headers
 
 # Check that the output file is created/correctness
-if ! [ -e "/tmp/study-dir/index.html" ]; then
+if ! [ -e "/tmp/study-dir/out.tsv" ]; then
     echo "Output file doesn't exist"
     exit 1
 fi
+
+
+echo "Output file created successfully"
