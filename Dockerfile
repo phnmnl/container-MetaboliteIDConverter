@@ -26,9 +26,9 @@ RUN apt-get install -y --no-install-recommends ant && \
 	apt-get -y clean && apt-get -y autoremove && rm -rf /var/lib/{cache,log}/ /tmp/* /var/tmp/*
 	
 
-###############
+################
 # Install Tool
-###############
+################
 
 WORKDIR /Javafiles/
 
@@ -38,4 +38,16 @@ RUN cd /Javafiles && git checkout -b tag0.4 v0.4
 
 RUN cd /Javafiles && ant jar
 
+
+################
+# Test Scripts
+################
+
+ADD runTest1.sh /usr/local/bin/runTest1.sh
+RUN chmod +x /usr/local/bin/runTest1.sh
+
+
+###############
+# Define EntryPoint
+################
 ENTRYPOINT ["java", "-jar", "dist/phnmnl-enrichment/phnmnl-enrichment.jar"]
