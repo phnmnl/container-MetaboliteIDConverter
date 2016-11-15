@@ -21,11 +21,11 @@ Code=0
 mkdir /tmp/study-dir 
 
 # Download Test data 
-wget http://vm-metexplore-dev.toulouse.inra.fr:3000/bmerlet/parsebionet-Enrichment/src/master/test-data/input.tsv
+wget http://vm-metexplore-dev.toulouse.inra.fr:3000/bmerlet/parsebionet-Enrichment/raw/develop/test-data/input.tsv
 
-chmod 777 input.tsv
+# chmod 777 input.tsv
 
-echo "$(cat input.tsv)"
+# echo "$(cat input.tsv)"
 
 # Run the actual app on the test data
 cmd="java -jar /Javafiles/dist/phnmnl-enrichment/phnmnl-enrichment.jar -inDB \"KEGG\" -headers -inFile ./input.tsv -outFile /tmp/study-dir/out.tsv"
