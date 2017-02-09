@@ -1,5 +1,5 @@
 ################################
-# DockerFile to build  the Parsebionet.enricment app block
+# DockerFile to build  the PhenoMeNal.enricment app block
 # Based on Ubuntu
 ###############################
 
@@ -15,14 +15,16 @@ ENV TOOL_VERSION v0.4
 
 # Image Metadata
 LABEL Description="PhenoMeNal Enrichment: open source software to cross reference metabolite data with well known database identifiers."
-LABEL Version=$TOOL_VERSION
+
+LABEL software.version="0.4.12"
+
+LABEL version="0.4"
+
+LABEL software="MetaboliteIDConverter"
 
 
 # Update the repository sources list
-RUN apt-get update
-
-# Install required package
-RUN apt-get install -y --no-install-recommends ant && \
+RUN apt-get update && apt-get install -y --no-install-recommends ant && \
 	apt-get -y clean && apt-get -y autoremove && rm -rf /var/lib/{cache,log}/ /tmp/* /var/tmp/*
 	
 
@@ -30,11 +32,9 @@ RUN apt-get install -y --no-install-recommends ant && \
 # Install Tool
 ################
 
-WORKDIR /Javafiles/
-
-RUN cd /Javafiles && git clone http://vm-metexplore-dev.toulouse.inra.fr:3000/bmerlet/parsebionet-Enrichment.git .
-
-RUN cd /Javafiles && git checkout -b tag0.4 v0.4 && ant jar
+RUN git clone --depth 1 --single-branch --branch $TOOL_VERSION http://vm-metexplore-dev.toulouse.inra.fr:3000/bmerlet/parsebionet-Enrichment.git Javafiles
+WORKDIR Javafiles
+RUN git checkout $TOOL_VERSION && ant jar
 
 
 ################
