@@ -56,5 +56,5 @@ If your tsv file has columns headers on the first line, add the parameter ```-he
 - Link the metabolites to our Metabolic Network database (available on www.metexplore.fr). And in particular the Human Global Metabolism Reconstruction, Recon2 [2].
 
 ## Publications
-1. Wohlgemuth G, Haldiya PK, Willighagen E, Kind T, Fiehn O. The Chemical Translation Service—a web-based tool to improve standardization of metabolomic reports. Bioinformatics. 2010;26(20):2647-2648. doi:10.1093/bioinformatics/btq476.
-2. Thiele I, Swainston N, Fleming RMT, et al. A community-driven global reconstruction of human metabolism. Nature biotechnology. 2013;31(5):10.1038/nbt.2488. doi:10.1038/nbt.2488. 
+- Wohlgemuth G, Haldiya PK, Willighagen E, Kind T, Fiehn O. The Chemical Translation Service—a web-based tool to improve standardization of metabolomic reports. Bioinformatics. 2010;26(20):2647-2648. doi:10.1093/bioinformatics/btq476.
+- Thiele I, Swainston N, Fleming RMT, et al. A community-driven global reconstruction of human metabolism. Nature biotechnology. 2013;31(5):10.1038/nbt.2488. doi:10.1038/nbt.2488. 
