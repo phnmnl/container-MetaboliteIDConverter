@@ -1,6 +1,6 @@
 # MetaboliteIDConverter
 
-Version:0.4.0 
+Version:0.5.1
 
 ## Short description
 Open source software to enrich metabolomic data sets with well known databases identifiers such as InChIKey or ChEBI identifiers
