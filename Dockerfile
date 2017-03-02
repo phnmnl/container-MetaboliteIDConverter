@@ -10,15 +10,15 @@ FROM java:8
 MAINTAINER PhenoMeNal-H2020 Project ( phenomenal-h2020-users@googlegroups.com )
 
 
-ENV TOOL_VERSION v0.4
+ENV TOOL_VERSION 0.5
 
 
 # Image Metadata
 LABEL Description="PhenoMeNal Enrichment: open source software to cross reference metabolite data with well known database identifiers."
 
-LABEL software.version="0.4.12"
+LABEL software.version="0.5"
 
-LABEL version="0.4"
+LABEL version="1.0"
 
 LABEL software="MetaboliteIDConverter"
 
