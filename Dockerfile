@@ -1,5 +1,5 @@
 ################################
-# DockerFile to build  the PhenoMeNal.enricment app block
+# DockerFile to build  the PhenoMeNal.MetaboliteIDConverter app block
 # Based on Java:8
 ###############################
 
