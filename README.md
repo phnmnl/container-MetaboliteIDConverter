@@ -1,3 +1,4 @@
+![LOGO](Logo_Metexplore.png)
 # MetaboliteIDConverter
 
 Version:0.5.1
@@ -27,7 +28,7 @@ The output file will contain the following metabolite identifiers :
 - Post-processing
 
 ## Tool Authors
-- MetExplore Group metexplore@toulouse.inra.fr
+- MetExplore Group contact-metexplore@inra.fr
 
 ## Container Contributors
 - [Benjamin Merlet](https://github.com/bmerlet90) (INRA Toulouse)
@@ -55,6 +56,6 @@ If your tsv file has columns headers on the first line, add the parameter ```-he
 - Enable users to choose the desired output databases from the list of databases available in the CTS WebService
 - Link the metabolites to our Metabolic Network database (available on www.metexplore.fr). And in particular the Human Global Metabolism Reconstruction, Recon2 [2].
 
-## Publications
+## References
 - Wohlgemuth G, Haldiya PK, Willighagen E, Kind T, Fiehn O. The Chemical Translation Service—a web-based tool to improve standardization of metabolomic reports. Bioinformatics. 2010;26(20):2647-2648. doi:10.1093/bioinformatics/btq476.
 - Thiele I, Swainston N, Fleming RMT, et al. A community-driven global reconstruction of human metabolism. Nature biotechnology. 2013;31(5):10.1038/nbt.2488. doi:10.1038/nbt.2488. 
