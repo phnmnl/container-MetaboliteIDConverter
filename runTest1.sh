@@ -21,15 +21,15 @@ Code=0
 mkdir /tmp/study-dir 
 
 # Download Test data 
-wget http://vm-metexplore-dev.toulouse.inra.fr:3000/bmerlet/parsebionet-Enrichment/raw/develop/test-data/input.tsv 
-wget http://vm-metexplore-dev.toulouse.inra.fr:3000/bmerlet/parsebionet-Enrichment/raw/develop/test-data/expectedOut.tsv 
+wget https://github.com/bmerlet90/MetaboliteIDConverter/raw/develop/test-data/input.tsv 
+wget https://github.com/bmerlet90/MetaboliteIDConverter/raw/develop/test-data/expectedOut.tsv 
 
 # chmod 777 input.tsv
 
 # echo "$(cat input.tsv)"
 
 # Run the actual app on the test data
-java -jar /Javafiles/dist/phnmnl-enrichment/phnmnl-enrichment.jar -inDB KEGG -headers -inFile ./input.tsv -outFile /tmp/study-dir/out.tsv
+java -jar /phnmnl-enrichment.jar -inDB KEGG -headers -inFile ./input.tsv -outFile /tmp/study-dir/out.tsv
 
 # Check that the output file is created/correctness
 if ! [ -e "/tmp/study-dir/out.tsv" ]; then
