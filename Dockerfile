@@ -17,10 +17,13 @@ LABEL software="MetaboliteIDConverter"
 
 ENV TAG_NUMBER 0.5
 
+ADD digicertca.crt /usr/local/share/ca-certificates/digicertca.crt
+
 # Update the repository sources list
-RUN apt-get update && apt-get install -y --no-install-recommends ant && \
+RUN apt-get update && apt-get install -y --no-install-recommends ant ca-certificates && \
 	apt-get -y clean && apt-get -y autoremove && rm -rf /var/lib/{cache,log}/ /tmp/* /var/tmp/*  && \
-	git clone --depth 1 --single-branch --branch $TAG_NUMBER https://github.com/bmerlet90/MetaboliteIDConverter.git Javafiles && \
+	update-ca-certificates && \
+	git clone --depth 1 --single-branch --branch $TAG_NUMBER https://vm-metexplore-dev.toulouse.inra.fr:3000/phnmnl/tool-MetaboliteIDConverter.git Javafiles && \
 	cd Javafiles && \
 	git checkout $TAG_NUMBER && \
 	ant jar && \
