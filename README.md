@@ -7,7 +7,7 @@ Version:0.5.1
 Open source software to enrich metabolomic data sets with well known databases identifiers such as InChIKey or ChEBI identifiers
 
 ## Description
-This module allows to convert Metabolite Identifiers to and from database identifiers. This open source software uses the Chemical Translation Service (CTS)[1] to convert metabolite identifiers, any of the following database can be used as input database:
+This module allows the conversion of Metabolite Identifiers to and from database identifiers. This open source software makes use of the Chemical Translation Service (CTS)[1] for conversion. Any of the following inputs can be used:
 - InChIKey
 - KEGG ID
 - ChEBI
@@ -57,5 +57,5 @@ If your tsv file has columns headers on the first line, add the parameter ```-he
 - Link the metabolites to our Metabolic Network database (available on www.metexplore.fr). And in particular the Human Global Metabolism Reconstruction, Recon2 [2].
 
 ## References
-- Wohlgemuth G, Haldiya PK, Willighagen E, Kind T, Fiehn O. The Chemical Translation Service—a web-based tool to improve standardization of metabolomic reports. Bioinformatics. 2010;26(20):2647-2648. doi:10.1093/bioinformatics/btq476.
-- Thiele I, Swainston N, Fleming RMT, et al. A community-driven global reconstruction of human metabolism. Nature biotechnology. 2013;31(5):10.1038/nbt.2488. doi:10.1038/nbt.2488. 
+[1] Wohlgemuth G, Haldiya PK, Willighagen E, Kind T, Fiehn O. The Chemical Translation Service—a web-based tool to improve standardization of metabolomic reports. Bioinformatics. 2010;26(20):2647-2648. doi:10.1093/bioinformatics/btq476.
+[2] Thiele I, Swainston N, Fleming RMT, et al. A community-driven global reconstruction of human metabolism. Nature biotechnology. 2013;31(5):10.1038/nbt.2488. doi:10.1038/nbt.2488. 
